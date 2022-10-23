@@ -6,7 +6,6 @@ import Button from 'react-bootstrap/Button';
 const Products = ({ data, toAdd, onDelete, onDetail }) => {
   return (
     <Container className='mt-5'>
-      <Button variant="danger" onClick={() => { localStorage.clear(); window.location.reload() }}>Logout</Button>
       <Button variant="primary" onClick={() => toAdd()}>Add Product</Button>
 
       <Table responsive className='mt-4'>
@@ -40,6 +39,9 @@ const Products = ({ data, toAdd, onDelete, onDetail }) => {
           }
         </tbody>
       </Table>
+      <center>
+        <Button variant="danger" className='ms-3' onClick={() => { localStorage.clear(); window.location.reload() }}>Logout</Button>
+      </center>
     </Container>
   )
 }
